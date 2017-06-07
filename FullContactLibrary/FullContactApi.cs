@@ -41,7 +41,7 @@ namespace FullContactLibrary
                     }
                     if (!response.IsSuccessStatusCode)
                     {
-                        throw new HttpRequestException();
+                        throw new HttpRequestException("Nothing found");
                     }
                     //var data = (FullContactPerson)JsonConvert.DeserializeObject(content , typeof(FullContactPerson));
                     var serializer = new DataContractJsonSerializer(typeof(FullContactPerson));
