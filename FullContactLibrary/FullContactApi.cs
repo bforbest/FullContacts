@@ -43,7 +43,6 @@ namespace FullContactLibrary
                     {
                         throw new HttpRequestException("Nothing found");
                     }
-                    //var data = (FullContactPerson)JsonConvert.DeserializeObject(content , typeof(FullContactPerson));
                     var serializer = new DataContractJsonSerializer(typeof(FullContactPerson));
                     var ms = new MemoryStream(Encoding.UTF8.GetBytes(content));
                     var data = (FullContactPerson)serializer.ReadObject(ms);
